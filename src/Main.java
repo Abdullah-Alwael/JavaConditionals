@@ -42,6 +42,35 @@ public class Main {
 
         System.out.println("the maximum number is " + max);
 
+//      3.Write a Java program that generates an integer between 1 and 7
+//      and displays the name of the weekday.
 
+        System.out.println("Random number generator");
+        // get a random number
+
+
+//        4. Write a program that takes a numeric score as input and prints
+//        the corresponding letter grade using the following grading scale:
+        System.out.println("Grade evaluator:");
+        int grade = -1;
+        do {
+            System.out.println("enter your grade (0 to 100):");
+            input.nextInt();
+            if (grade <0 || grade > 10){
+                System.out.println("cant be, enter again!");
+            }
+        } while (grade <0 || grade > 100);
+
+        if (grade >=90){
+            System.out.println('A');
+        } else if (grade >=80){
+            System.out.println('B');
+        } else if (grade >=70){
+            System.out.println('C');
+        } else if (grade >=60){
+            System.out.println('D');
+        } else {
+            System.out.println('F');
+        }
     }
 }
