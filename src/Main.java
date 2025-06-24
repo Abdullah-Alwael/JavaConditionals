@@ -56,10 +56,10 @@ public class Main {
         do {
             System.out.println("enter your grade (0 to 100):");
             input.nextInt();
-            if (grade <0 || grade > 10){
+            if (grade < 0 || grade > 10){
                 System.out.println("cant be, enter again!");
             }
-        } while (grade <0 || grade > 100);
+        } while (grade < 0 || grade > 100);
 
         if (grade >=90){
             System.out.println('A');
@@ -72,5 +72,20 @@ public class Main {
         } else {
             System.out.println('F');
         }
+
+//      5. Write a Java program that takes a person's age as input and
+//      categorizes them into one of three age categories: "Child,"
+//      "Teenager," or "Adult" using an if statement.
+        System.out.println("Please enter your age");
+        int age = input.nextInt();
+
+        if (age < 13) {
+            System.out.println("You are a child");
+        } else if (age <= 19) {
+            System.out.println("You are a teenager");
+        } else {
+            System.out.println("You are an adult");
+        }
+
     }
 }
