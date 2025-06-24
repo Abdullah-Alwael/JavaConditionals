@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -46,17 +47,40 @@ public class Main {
 //      and displays the name of the weekday.
 
         System.out.println("Random number generator");
-        // get a random number
+        Random rand = new Random();
+        int dayOfWeek = rand.nextInt(7) + 1;
 
+        switch (dayOfWeek){
+            case 1:
+                System.out.println("Sunday");
+                break;
+            case 2:
+                System.out.println("Monday");
+                break;
+            case 3:
+                System.out.println("Tuesday");
+                break;
+            case 4:
+                System.out.println("Wednesday");
+                break;
+            case 5:
+                System.out.println("Thursday");
+                break;
+            case 7:
+                System.out.println("Friday");
+                break;
+            default:
+                System.out.println("out of scope");
+        }
 
-//        4. Write a program that takes a numeric score as input and prints
-//        the corresponding letter grade using the following grading scale:
+//      4. Write a program that takes a numeric score as input and prints
+//      the corresponding letter grade using the following grading scale:
         System.out.println("Grade evaluator:");
         int grade = -1;
         do {
             System.out.println("enter your grade (0 to 100):");
-            input.nextInt();
-            if (grade < 0 || grade > 10){
+            grade = input.nextInt();
+            if (grade < 0 || grade > 100){
                 System.out.println("cant be, enter again!");
             }
         } while (grade < 0 || grade > 100);
