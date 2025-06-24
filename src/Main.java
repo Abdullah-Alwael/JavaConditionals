@@ -2,23 +2,46 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-         /*
-        * Write a program that takes two strings as input and check if they are equal,
-            ignoring the case, then prints whether they are equal or not.
-        * */
         Scanner input = new Scanner(System.in);
 
-        System.out.println("String comparison");
-        System.out.println("Enter first string");
-        String firstString = input.nextLine();
+//      1.Write a program that checks the role of the user
+        System.out.println("Checking the user role");
+        System.out.println("enter your role in the system:");
+        String userRole = input.nextLine();
 
-        System.out.println("Enter the second string:");
-        String secondString = input.nextLine();
+        if (userRole.equalsIgnoreCase("admin")){
+            System.out.println("Welcome "+userRole.toLowerCase());
+        } else if (userRole.equalsIgnoreCase("superuser")) {
+            System.out.println("Welcome "+userRole.toLowerCase());
+        } else if (userRole.equalsIgnoreCase("user")) {
+            System.out.println("Welcome "+userRole.toLowerCase());
+        } // sounds unnecessary to check (if conditions) because the user is entering it.
+        // can be replaced with only the print statement
 
-        if (firstString.equalsIgnoreCase(secondString)){
-            System.out.println("Strings are equal");
+//      2.Take three numbers from the user and print the greatest number.
+        System.out.println("Find max number");
+        System.out.println("enter the first number:");
+        float number = input.nextFloat();
+
+        System.out.println("enter the second number:");
+        float number2 = input.nextFloat();
+        float max;
+
+        if (number > number2){
+            max = number;
         } else {
-            System.out.println("Strings are not equal");
+            max = number2;
         }
+
+        System.out.println("enter the third number:");
+        number = input.nextFloat();
+
+        if (number > max){
+            max = number;
+        }
+
+        System.out.println("the maximum number is " + max);
+
+
     }
 }
